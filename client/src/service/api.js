@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:8000';
+const URL = '';
 
 export const authenticateSignup = async (data) => {
     try {
