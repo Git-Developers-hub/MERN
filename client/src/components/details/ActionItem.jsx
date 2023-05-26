@@ -39,11 +39,11 @@ const StyledButton = styled(Button)(({ theme }) => ({
 const ActionItem = ({ product }) => {
 
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const { id } = product;
 
     const [quantity, setQuantity] = useState(1);
 
-    const { id } = product;
+    const dispatch = useDispatch();
 
     const addItemToCart = () => {
         dispatch(addToCart(id, quantity))

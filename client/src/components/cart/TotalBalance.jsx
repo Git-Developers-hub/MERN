@@ -35,7 +35,7 @@ const Discount = styled(Typography)`
 
 const TotalBalance = ({ cartItems }) => {
     const [price, setPrice] = useState(0);
-    const [discount, setDiscount] = useState(0);
+    const [discount, setDiscount] = useState(0)
 
     useEffect(() => {
         totalAmount();
