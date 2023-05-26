@@ -22,13 +22,14 @@ const PORT = 8000;
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
-const URL = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@e-commerce.lgdeci3.mongodb.net/?retryWrites=true&w=majority`;
+// const URL = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@e-commerce.lgdeci3.mongodb.net/?retryWrites=true&w=majority`;
 
-Connection(URL);
+// Connection(URL);
+Connection(USERNAME, PASSWORD);
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'))
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('client/build'))
+// }
 
 app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
 
